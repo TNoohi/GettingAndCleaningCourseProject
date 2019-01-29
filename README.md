@@ -22,7 +22,7 @@ run_analysis.R follows the 5 steps required as described in the course projectâ€
 	y_train <- test/y_train.txt 
 
 
-3.Merges the training and the test sets to create one data set
+3. Merges the training and the test sets to create one data set
 
 	X (10299 rows, 561 columns) is created by merging x_train and x_test using rbind() function
 	
@@ -32,15 +32,15 @@ run_analysis.R follows the 5 steps required as described in the course projectâ€
 	
 	All_Data (10299 rows, 563 column) is created by merging Subject, Y and X using cbind() function
 
-4.Extracts only the measurements on the mean and standard deviation for each measurement
+4. Extracts only the measurements on the mean and standard deviation for each measurement
 
 	subSetData (10299 rows, 88 columns) is created by subsetting All_Data, selecting only columns: subject, code and the measurements on the mean and standard deviation (std) for each measurement
 
-5. Uses descriptive activity names to name the activities in the data set
+5.  Uses descriptive activity names to name the activities in the data set
 
 	- Entire numbers in code column of the subSetData replaced with corresponding activity taken from second column of the activities variable
 
-- Appropriately labels the data set with descriptive variable names
+6.  Appropriately labels the data set with descriptive variable names
 
 		1 . code column in subSetData renamed into activities
 
@@ -102,7 +102,7 @@ names(subSetData)<-gsub("(\\.*){0,3}Y", "_Y", names(subSetData))
 names(subSetData)<-gsub("(\\.*){0,3}Z", "_Z", names(subSetData))
 
 
-5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
+7. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
 
 	FinalData (180 rows, 88 columns) is created by sumarizing subSetData taking the means of each variable for each activity and each subject, after groupped by subject and activity.
 	
