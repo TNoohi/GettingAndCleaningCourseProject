@@ -38,30 +38,31 @@ run_analysis.R follows the 5 steps required as described in the course project�
 
 5. Uses descriptive activity names to name the activities in the data set
 
-	Entire numbers in code column of the subSetData replaced with corresponding activity taken from second column of the activities variable
+	- Entire numbers in code column of the subSetData replaced with corresponding activity taken from second column of the activities variable
 
-Appropriately labels the data set with descriptive variable names
+- Appropriately labels the data set with descriptive variable names
 
-code column in subSetData renamed into activities
+		1 . code column in subSetData renamed into activities
 
-All word strats with capital letter
+		2. All word strats with capital letter
 
-Words are separated by "_" to make them easier to read
+		3. Words are separated by "_" to make them easier to read
 
-All Acc in column’s name replaced by Accelerometer
+		4. All Acc in column’s name replaced by Accelerometer
 
-All Gyro in column’s name replaced by Gyroscope
+		5. All Gyro in column’s name replaced by Gyroscope
 
-All BodyBody in column’s name replaced by Body
+		6. All BodyBody in column’s name replaced by Body
 
-All Mag in column’s name replaced by Magnitude
+		7. All Mag in column’s name replaced by Magnitude
 
-All start with character f in column’s name replaced by Frequency
+		8. All start with character f in column’s name replaced by Frequency
 
-All start with character t in column’s name replaced by Time
+		9. All start with character t in column’s name replaced by Time
 
 
-
+	-Code:
+	
 names(subSetData)[1] = "Subject"
 
 names(subSetData)[2] = "Activity"
@@ -105,4 +106,4 @@ names(subSetData)<-gsub("(\\.*){0,3}Z", "_Z", names(subSetData))
 
 	FinalData (180 rows, 88 columns) is created by sumarizing subSetData taking the means of each variable for each activity and each subject, after groupped by subject and activity.
 	
-Export FinalData into FinalData.txt file.
+	Export FinalData into FinalData.txt file.
