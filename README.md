@@ -6,12 +6,19 @@ run_analysis.R follows the 5 steps required as described in the course projectâ€
 2. Assign each data to variables
 
 	features <- features.txt 
+	
 	activities <- activity_labels.txt
+	
 	subject_test <- test/subject_test.txt 
+	
 	x_test <- test/X_test.txt 
+	
 	y_test <- test/y_test.txt 
+	
 	subject_train <- test/subject_train.txt 
+	
 	x_train <- test/X_train.txt 
+	
 	y_train <- test/y_train.txt 
 
 
